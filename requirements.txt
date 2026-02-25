@@ -1,16 +1,17 @@
 # ─────────────────────────────────────────────────────────────
-# Movie Recommendation System — Python 3.10+
-# Pinned versions for reproducible Render deployments
+# Movie Recommendation System
+# Pinned versions with pre-built wheels for Python 3.11 on Linux
 # ─────────────────────────────────────────────────────────────
 
 # Web framework
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
 
-# Data science & ML
-scikit-learn==1.7.2
-numpy==2.2.6
-scipy==1.15.3
+# Data science & ML — use versions WITH pre-built manylinux wheels
+# so Render never needs a Fortran/C compiler
+scikit-learn==1.5.2
+numpy==1.26.4
+scipy==1.13.1
 pandas==2.2.2
 
 # HTTP client for TMDB (synchronous — runs in thread pool)
