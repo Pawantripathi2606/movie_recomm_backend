@@ -1,17 +1,19 @@
 # ─────────────────────────────────────────────────────────────
 # Movie Recommendation System
-# ALL packages must have pre-built manylinux binary wheels.
-# --only-binary=:all: in render.yaml ensures no source builds.
+# Python 3.11.8 (locked via .python-version)
+# These EXACT versions were used to CREATE the .pkl files —
+# they MUST match for pickle loading to succeed.
+# All have cp311-manylinux wheels — no compilation needed.
 # ─────────────────────────────────────────────────────────────
 
 # Web framework
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
 
-# Data science & ML — verified manylinux cp311 wheels on PyPI
-scikit-learn==1.5.2
-numpy==1.26.4
-scipy==1.11.4
+# Data science & ML — MUST match pkl creation environment exactly
+scikit-learn==1.7.2
+numpy==2.2.6
+scipy==1.15.3
 pandas==2.2.2
 
 # HTTP client for TMDB
