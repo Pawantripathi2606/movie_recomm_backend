@@ -1,21 +1,21 @@
 # ─────────────────────────────────────────────────────────────
 # Movie Recommendation System
-# Pinned versions with pre-built wheels for Python 3.11 on Linux
+# ALL packages must have pre-built manylinux binary wheels.
+# --only-binary=:all: in render.yaml ensures no source builds.
 # ─────────────────────────────────────────────────────────────
 
 # Web framework
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
 
-# Data science & ML — use versions WITH pre-built manylinux wheels
-# so Render never needs a Fortran/C compiler
+# Data science & ML — verified manylinux cp311 wheels on PyPI
 scikit-learn==1.5.2
 numpy==1.26.4
-scipy==1.13.1
+scipy==1.11.4
 pandas==2.2.2
 
-# HTTP client for TMDB (synchronous — runs in thread pool)
+# HTTP client for TMDB
 requests==2.32.3
 
-# Pydantic v2 (bundled with FastAPI 0.111)
+# Pydantic v2
 pydantic==2.7.1
