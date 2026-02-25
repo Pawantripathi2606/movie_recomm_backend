@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: movie-recommender-api
+    env: python
+    region: oregon          # closest to most users; change if needed
+    plan: free              # upgrade to starter for persistent disk
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TMDB_API_KEY
+        value: fe1e31ee68aa8e506d3c31623e67e762
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    # Render free tier spins down after inactivity.
+    # Use a cron job / uptime robot to keep it warm.

@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# .gitignore — Movie Recommendation FastAPI Project
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# Pytest
+.pytest_cache/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Render / cloud
+.render/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

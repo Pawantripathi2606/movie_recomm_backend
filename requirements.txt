@@ -1,0 +1,20 @@
+# ─────────────────────────────────────────────────────────────
+# Movie Recommendation System — Python 3.10+
+# Pinned versions for reproducible Render deployments
+# ─────────────────────────────────────────────────────────────
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# Data science & ML
+scikit-learn==1.7.2
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.2.2
+
+# HTTP client for TMDB (synchronous — runs in thread pool)
+requests==2.32.3
+
+# Pydantic v2 (bundled with FastAPI 0.111)
+pydantic==2.7.1
